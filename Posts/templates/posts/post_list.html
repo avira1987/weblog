@@ -4,13 +4,13 @@
 <title>Posts</title>
 </head>
 <body>
+<ul>
+    {% for post in posts %}
 
-{% for post in posts %}
-
-    <ul>
-        {{post.title}}
-    </ul>
-{% endfor %}
-
+        <li><a href="/post/{{post.pk}}"> {{post.pk}} - {{post.title}}</a> </li>
+    
+    {% endfor %}
+    
+</ul>
 </body>
 </html>
