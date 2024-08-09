@@ -7,10 +7,10 @@
 
     <h1>{{post.title}}</h1>
     <p>{{post.text}}</p>
-    
+
     <ul>
          {% for c in comments %}
-            <li>c.text - c.create_time</li>
+            <li>{{c.text}} ,{{c.create_time}}</li>
          {% endfor %}
     </ul>
 

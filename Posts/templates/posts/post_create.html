@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Post Form</title>
+</head>
+<body>
+
+    <form action="posts/create/'" method="POST">
+        {% csrf_token %}        
+        {{ form }}
+    </form>
+
+<a href="/posts/">BACK TO POSTS</a>
+</body>
+</html>
