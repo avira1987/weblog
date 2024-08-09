@@ -19,9 +19,9 @@ def post_detail(request,pk):
 def post_create(request):
     if request.method == "POST":
         form = PostForm(request.POST)
-        if request.is_valid():
+        if form.is_valid():
             Post.objects.create(**form.cleaned_data)
-            return HttpResponseRedirect('/posts/')
+            return HttpResponseRedirect('posts/')
     else:
         form = PostForm()
     return render(request, 'posts/post_create.html',{'form':form})
