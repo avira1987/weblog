@@ -7,8 +7,8 @@
 
     <form action="/posts/create/" method="POST">
         {% csrf_token %}        
-        {{ form }}
-        <input type="submit" value="save">
+        {{ form.as_p }}
+        <input type="submit" value="Save">
     </form>
 
 <a href="/posts/">BACK TO POSTS</a>
