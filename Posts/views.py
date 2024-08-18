@@ -41,6 +41,7 @@ class PostList(ListView):
     template_name= "posts/post_list.html"
     context_object_name= 'posts'
 
+
 class PostDetail(DetailView):
     model =Post
     template_name= 'posts/post_detail.html'
