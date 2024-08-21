@@ -6,10 +6,17 @@ from Posts.forms import PostForm
 from django.http import HttpResponse,HttpResponseRedirect, HttpResponseNotFound
 
 from django.views.generic import DetailView, ListView
+
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+
 # Create your views here.
 
+@api_view(['GET','POST'])
 def home(request):
-    return render(request, 'home/index.html')
+
+    return Response({'name':'avx'},status=status.HTTP_200_OK)
 
 def post_list(request):
     posts = Post.objects.all()
