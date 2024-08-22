@@ -6,3 +6,5 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields=['pk','title', 'text', 'is_enable']
+
+        
